@@ -8,11 +8,11 @@ html {
 }
 body {
 	background-color: 
-#fff;
+rgb(255, 255, 255);
 	color: 
 #000;
-	font-family: "Century Gothic", helvetica, arial, sans-serif;
-	font-size: 1.4em; /* equiv 14px */
+	font-family: Garamond, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+	font-size: 1.6em; /* equiv 14px */
 	line-height: 1.5; /* adapt to your design */
 }
 

@@ -1,46 +1,4 @@
-.en-tete{
 
-    border: 1px solid black;
-    box-sizing: border-box;
-    background-color: white;
-    height: 10vh;
-    display: flex;
-    
-}
-
-.navlist{
-
-    width: 70%;
-    display: flex;
-}
-
-.navlist li{
-
-    list-style: none;
-    padding: 10%;
-    display: inline;
-}
-
-.navlist li a{
-
-    background: linear-gradient(rgb(254, 254, 254), 70%, rgb(175, 176, 198));
-    text-decoration: none;
-    color: rgb(48, 97, 141);
-
-}
-
-.navlist li a:hover{
-
-    background: linear-gradient(rgb(254, 254, 254), 70%, rgb(175, 176, 198));
-    color: azure;
-
-
-}
-
-#logo{
-
-    height: 9vh;
-}
 
 #Table{
 

@@ -309,14 +309,32 @@ main > h1{
 
 	width: 100%;
 	margin-top: 1vw;
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 3vw;
+	position: relative;
+
 }
 
-.infos{
+.container-footer::before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	border-bottom: 0.5px solid white;
+	left: 0;
+	margin-left: 2vw;
+	margin-bottom: 1vw;
+	width: 96%;
+ }
+
+
+.column{
 
 	width: 30%;
+
 }
 
-.infos>ul{
+.column>ul{
 	list-style: none;
 	display: flex;
 	flex-direction: column;
@@ -328,7 +346,7 @@ main > h1{
 	padding-left: 0.3vw;
 }
 
-.infos>ul a{
+.column>ul a{
 
 	text-align: left;
 	color: #fff;
@@ -338,14 +356,14 @@ main > h1{
 	font-size: 1.1em;
 }
 
-.infos>ul a:hover{
+.column>ul a:hover{
 
 	text-align: left;
 	color: rgb(225, 225, 225);
 	text-decoration: none;
 }
 
-.container-footer h1{
+.footer h1{
 
 	left: 2vw;
 	text-align: left;
@@ -372,7 +390,7 @@ main > h1{
 	padding-bottom: 0px;
 }
 
-.container-footer p{
+.footer p{
 
 	color: #fff;
 	margin-left: 2vh;
@@ -383,4 +401,6 @@ main > h1{
 
 p{
 	font-size: 1.1em;
+	padding-left: 1vw;
+	/*padding: 1vw 6vw 1vw 6vw;*/
 }

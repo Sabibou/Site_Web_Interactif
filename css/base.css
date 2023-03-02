@@ -39,12 +39,10 @@ hgroup {
 	margin: 1.5em 0 0;
 }
 h1, .h1-like {
-	font-size: 1.8571em; /* equiv 26px */
-	font-weight:bold;
+	font-size: 2em; /* equiv 26px */
 	line-height: 1.6154em;
-	margin: .8077em 0 0 0;
+	margin: .8077em 0 .8077em 0;
 	text-align: center;
-	color: rgb(0 112 209);
 
 }
 h2, .h2-like {
@@ -52,6 +50,9 @@ h2, .h2-like {
 	font-weight: normal;
 	line-height: 1.75em;
 	margin: .875em 0 0 0;
+	padding: 1px;
+	border-bottom: 0.5px solid black;
+	width: 30%;
 }
 h3, .h3-like {
 	font-size: 1.5714em; /* equiv 22px */
@@ -204,6 +205,7 @@ body > script {display: none !important;}
 	flex-direction: row;
 	position: sticky;
 	top: 0px;
+	z-index: 10000;
     
 }
 
@@ -256,14 +258,6 @@ header .navbar{
 
 }
 
-footer{
-
-	background-color: rgb(0 112 209);
-	order: 100;
-	height: 50vh;
-
-}
-
 .grow { 
 	transition: all .2s ease-in-out; 
 }
@@ -285,4 +279,108 @@ head{
 aside{
 
 	order: 1;
+}
+
+main > h1{
+
+    background: linear-gradient(rgb(1 114 208), rgb(0 67 156));
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 0.5vh;
+	font-weight: bold;
+    z-index: 10;
+    height: 5vh;
+    border-radius: 10px;
+}
+
+.footer{
+
+	background: linear-gradient(rgb(1 114 208), rgb(0 67 156));
+	order: 100;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	margin-top: 2vh;
+
+}
+
+.container-footer{
+
+	width: 100%;
+	margin-top: 1vw;
+}
+
+.infos{
+
+	width: 30%;
+}
+
+.infos>ul{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: space-between;
+	align-items: left;
+	height: 10vh;
+	margin-left: 2vw;
+	padding-left: 0.3vw;
+}
+
+.infos>ul a{
+
+	text-align: left;
+	color: #fff;
+	text-decoration: none;
+	margin-left: 0vw;
+	padding-left: 0vw;
+	font-size: 1.1em;
+}
+
+.infos>ul a:hover{
+
+	text-align: left;
+	color: rgb(225, 225, 225);
+	text-decoration: none;
+}
+
+.container-footer h1{
+
+	left: 2vw;
+	text-align: left;
+	margin-left: 2vw;
+	margin-right: 2vw;
+	margin-bottom: 1vw;
+	color: #fff;
+	border-bottom: 0.5px solid ;
+	padding-bottom: 1vw;
+}
+
+.container-footer h2{
+
+	left: 2vw;
+	text-align: left;
+	margin-left: 2vw;
+	margin-right: 2vw;
+	margin-top: 2vw;
+	color: #fff;
+	width: 30%;
+	border-bottom: none;
+	font-size: bold;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.container-footer p{
+
+	color: #fff;
+	margin-left: 2vh;
+	margin-top: 2vw;
+
+
+}
+
+p{
+	font-size: 1.1em;
 }

@@ -1,12 +1,5 @@
 
 
-#Table{
-
-    border: 1px solid black;
-    box-sizing: border-box;
-    
-}
-
 
 .slider-index{
     width: 100%;  
@@ -81,7 +74,7 @@
 
 #slide-img3 {
 
-    background-image: url("../images/gow_650.jpeg");
+    background-image: url("../images/gow_flou.jpeg");
 
 }
 
@@ -98,10 +91,12 @@
     left: 50vw;
     bottom: 0;
     margin-top: 10px;
+    /*border: thick double rgb(2, 80, 183);*/
 }
 
 .slide a:hover{
     background: linear-gradient(rgb(2, 80, 183), rgb(1, 37, 83));
+    /*border: thick double rgb(1, 37, 83);*/
 }
 
 .slide p{

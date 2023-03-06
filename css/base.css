@@ -47,6 +47,8 @@ h2, .h2-like {
 	position: sticky;
 	top: 0px;
 	z-index: 10000;
+	min-height: 50px;
+	max-height: 70px;
     
 }
 
@@ -81,6 +83,7 @@ header .navbar{
 	padding: 0.5vh;
 	border-radius: 20px;
 	font-weight: bold;
+	min-height: 50px;
 	
 }
 
@@ -93,8 +96,9 @@ header .navbar{
 
 .en-tete a #logo{
 
-	height: 4vh;
-	margin-top: 1vh;
+	height: 90%;
+	margin-top: 5%;
+	margin-left: 0%;
 	
 
 }
@@ -263,6 +267,7 @@ main > h1{
 		height : 8vh;
 	}
 
+	/*
 	.en-tete a #logo{
 
 		height: 6vh;
@@ -270,7 +275,7 @@ main > h1{
 		
 	
 	}
-
+	*/
 }
 
 @media screen and (max-width: 700px){
@@ -288,7 +293,7 @@ main > h1{
 
 		height: 8vh;
 	}
-
+	/*
 	.en-tete a #logo{
 
 		height: 6vh;
@@ -296,8 +301,13 @@ main > h1{
 		
 	
 	}
-
+	*/
 	main>h1{
 		padding-bottom: 15px;
+	}
+
+	h2{
+
+		width: 50%;
 	}
 }

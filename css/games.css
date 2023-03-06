@@ -1,0 +1,38 @@
+
+
+
+#figure-img figcaption{
+
+    text-align: center;
+    background: linear-gradient(rgb(1 114 208), rgb(0 67 156));
+    color: white;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+
+
+.game {
+
+    margin-bottom: 30px;
+}
+
+
+#GOW #figure-img{
+
+    height: 250px;
+    width: 250px;
+    float: right;
+    object-fit: cover;
+    margin-left: 10px;
+    border: 1px solid black;
+
+}
+
+#Uncharted #figure-img{
+
+    float: right;
+    object-fit: cover;
+    margin-left: 10px;
+    border: 1px solid black;
+
+}

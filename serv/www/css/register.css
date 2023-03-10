@@ -1,0 +1,37 @@
+.input{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.input input{
+
+
+    border: 2px solid rgb(1 114 208);
+    border-radius: 4px;
+    display: block;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 5px;
+    width: 20%;
+}
+
+.input input:focus{
+
+    outline: 0;
+    border-color: blue;
+}
+
+.input.error input{
+
+    border-color: red;
+}
+
+.input.success input{
+
+    border-color: green;
+}
+
+.input .error{
+    color: red;
+}

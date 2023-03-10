@@ -24,15 +24,46 @@
     float: right;
     object-fit: cover;
     margin-left: 10px;
+    margin-bottom: 30px;
     border: 1px solid black;
 
 }
 
-#Uncharted #figure-img{
+#uncharted #figure-img{
 
-    float: right;
+    height: 259px;
+    width: 194px;
+    float: left;
     object-fit: cover;
-    margin-left: 10px;
+    margin: 20px 10px 35px 5px;
     border: 1px solid black;
 
+}
+
+#uncharted{
+
+    margin-bottom: 110px;
+}
+
+#ratchet #figure-img{
+
+    height: 259px;
+    width: 194px;
+    float: right;
+    object-fit: cover;
+    margin: 20px 10px 50px 5px;
+    border: 1px solid black;
+}
+
+@media screen and (min-width: 980px){
+
+    .game{
+
+        margin-bottom: 120px;
+    }
+
+    #uncharted{
+
+        margin-bottom: 160px;
+    }
 }

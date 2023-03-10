@@ -36,6 +36,9 @@ h2, .h2-like {
 	width: 30%;
 }
 
+/*barre de navigation-----------
+
+-------------------------*/
 .en-tete{
 
     box-sizing: border-box;
@@ -52,9 +55,11 @@ h2, .h2-like {
     
 }
 
-header .navbar{
+.navbar{
 
 	width: 50%;
+	position: relative;
+
 }
 
 .navlist{
@@ -65,11 +70,16 @@ header .navbar{
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	position: absolute;
 }
 
 .navlist li{
 
     list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+	position: relative;
 
 
 }
@@ -87,12 +97,43 @@ header .navbar{
 	
 }
 
-.navlist li a:hover{
+.navlist a:hover{
 
     background: rgb(3, 84, 154);
 
 
 }
+
+.sub-list{
+
+	display: none;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.sub-list li{
+
+	background-color: #fff;
+	float: none;
+	width: 100%;
+	align-items: center;
+}
+
+.sub-list a{
+
+	width: 100%;
+	border-radius: 0px;
+
+
+}
+
+.navlist li:hover ul{
+	display: block;
+}
+
 
 .en-tete a #logo{
 
@@ -103,13 +144,20 @@ header .navbar{
 
 }
 
-.grow { 
+
+
+#grow { 
 	transition: all .2s ease-in-out; 
 }
 	
-.grow:hover { 
+#grow:hover { 
 	transform: scale(1.1); 
 }
+
+
+/*----------------------
+
+--------------------*/
 
 main{
 
@@ -138,6 +186,12 @@ main > h1{
     border-radius: 10px;
 }
 
+
+
+/*footer ---------------
+
+---------------------
+*/
 .footer{
 
 	background: linear-gradient(rgb(1 114 208), rgb(0 67 156));
@@ -243,11 +297,13 @@ main > h1{
 }
 
 
+
+
 @media screen and (min-width: 980px){
 
 	main{
-		margin-left: 10%;
-		width: 80%;
+		margin-left: 20%;
+		width: 60%;
 	}
 
 	.navlist li a{

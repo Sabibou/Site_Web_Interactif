@@ -22,16 +22,18 @@
     border-color: blue;
 }
 
+/*
 .input.error input{
 
     border-color: red;
 }
-
+*/
 .input.success input{
 
     border-color: green;
 }
 
 .input .error{
+    
     color: red;
 }

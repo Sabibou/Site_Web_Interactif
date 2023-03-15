@@ -40,6 +40,12 @@ const isValidEmail = email => {
     return re.test(String(email).toLowerCase());
 };
 
+const isValidPwd = pwd => {
+
+    const re = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8}$/;
+    return re.test(String(pwd));
+}
+
 const validateInputs = () => {
 
     const usernameValue = username.value.trim();
@@ -52,6 +58,10 @@ const validateInputs = () => {
     if(usernameValue === ''){
 
         setError(username, 'Username is required');
+    }
+    else if(usernameValue.length < 6){
+
+        setError(username, 'Username must be 6 characters long')
     }
     else{
 
@@ -75,9 +85,9 @@ const validateInputs = () => {
 
         setError(userpwd, 'Password is required');
     }
-    else if(userpwd.length < 8){
+    else if(!isValidPwd(userpwdValue)){
 
-        setError(userpwd, 'Password too short');
+        setError(userpwd, 'Password needs a capital letter, a number, a lowercase letter and to be 8 characters long');
     }
     else{
 

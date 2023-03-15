@@ -31,11 +31,13 @@
                     </li>
                     <li id="grow"><a href="./games.html">Jeux vidéos</a></li>
                     <li id="grow"><a href="./accessories.html">Accessoires</a></li>
-                    <li><a href="./register.html">S'enregistrer</a></li>
                 </ul>
             </nav>
+
+            <a href="./register.html">
+                <img id="user-icon" src="./images/user.png" alt="Image pour accèder à la page de connexion">
+            </a>
         </header>
-		<main>
 
 			<h1> Se registrer </h1>
 			<!--
@@ -51,7 +53,7 @@
 			
 			<h2> Form </h2>
 			-->
-			<form id="form" method="post" action="htbin/register.py">
+			<form id="form" method="post" action="/htbin/register.py">
 				<div class="input">
 					<label for="username">User Name</label>
 					<input id="username" type="text" name="username"/>
@@ -84,7 +86,7 @@
 				</div>
 				
 				<p><input type="submit" value="Register" /><input type="reset" value="Clear" /></p>
-			</form>-->
+			</form>
 			<a href="/">Retour &agrave; la page d'accueil</a>
 
 		</main>

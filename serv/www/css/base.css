@@ -134,7 +134,7 @@ h2, .h2-like {
 	color: white;
 	font-size: small;
 	width: 100%;
-
+	border:  0.5px solid white;
 
 }
 
@@ -322,7 +322,14 @@ main > h1{
 
 }
 
+@media screen and (min-width: 1200px){
 
+	.navbar{
+
+		width: 85vw;
+		left: 1vw;
+	}
+}
 
 
 @media screen and (min-width: 980px){
@@ -357,7 +364,7 @@ main > h1{
 
 	.navbar{
 
-		width:80%;
+		width:75vw;
 	}
 }
 

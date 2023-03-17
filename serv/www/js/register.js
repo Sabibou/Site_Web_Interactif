@@ -8,9 +8,11 @@ const birthdate = document.getElementById('birthdate');
 
 form.addEventListener('submit', e => {
 
-    //e.preventDefault();
 
-    validateInputs();
+    if(!validateInputs()){
+
+        e.preventDefault();
+    }
 });
 
 
@@ -22,6 +24,7 @@ const setError = (element, message) => {
     errorDisplay.innerText = message;
     inputControl.classList.add('error');
     inputControl.classList.remove('success');
+
 };
 
 const setSuccess = element => {
@@ -32,6 +35,8 @@ const setSuccess = element => {
     errorDisplay.innerText = '';
     inputControl.classList.add('success');
     inputControl.classList.remove('error');
+
+    return false;
 };
 
 const isValidEmail = email => {
@@ -42,8 +47,20 @@ const isValidEmail = email => {
 
 const isValidPwd = pwd => {
 
-    const re = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8}$/;
+    const re = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
     return re.test(String(pwd));
+}
+
+const isValidDate = date => {
+
+    const dateParts = date.split('/');
+    const day = parseInt(dateParts[0]);
+    const month = parseInt(dateParts[1]);
+    const year = parseInt(dateParts[2]);
+
+    var newDate = new Date(year, month-1, day);
+
+    return (newDate.getFullYear() == year && newDate.getMonth() === month-1 && newDate.getDate() === day);
 }
 
 const validateInputs = () => {
@@ -55,13 +72,17 @@ const validateInputs = () => {
     const lastnameValue = lastname.value.trim();
     const birthdateValue = birthdate.value.trim();
 
+    const reDate = /\d{2}(\/)\d{2}(\/)\d{4}/ 
+
+    let valid = true;
+
     if(usernameValue === ''){
 
-        setError(username, 'Username is required');
+        valid = setError(username, 'Username is required');
     }
     else if(usernameValue.length < 6){
 
-        setError(username, 'Username must be 6 characters long')
+        valid = setError(username, 'Username must be 6 characters long')
     }
     else{
 
@@ -70,11 +91,11 @@ const validateInputs = () => {
 
     if(emailValue === ''){
 
-        setError(email, 'Email is required');
+        valid = setError(email, 'Email is required');
     }
     else if(!isValidEmail(emailValue)){
 
-        setError(email, 'Email is not in the good format');
+        valid = setError(email, 'Email is not in the good format');
     }
     else{
 
@@ -83,11 +104,11 @@ const validateInputs = () => {
 
     if(userpwdValue === ''){
 
-        setError(userpwd, 'Password is required');
+        valid = setError(userpwd, 'Password is required');
     }
     else if(!isValidPwd(userpwdValue)){
 
-        setError(userpwd, 'Password needs a capital letter, a number, a lowercase letter and to be 8 characters long');
+        valid = setError(userpwd, 'Password needs a capital letter, a number, a lowercase letter and to be 8 characters long');
     }
     else{
 
@@ -96,7 +117,7 @@ const validateInputs = () => {
 
     if(firstnameValue === ''){
 
-        setError(firstname, 'First Name is required');
+        valid = setError(firstname, 'First Name is required');
     }
     else{
 
@@ -105,21 +126,27 @@ const validateInputs = () => {
 
     if(lastnameValue === ''){
 
-        setError(lastname, 'Last Name is required');
+        valid = setError(lastname, 'Last Name is required');
     }
     else{
 
         setSuccess(lastname);
     }
 
-    if(birthdateValue === ''){
-
-        setError(birthdate, 'Birth Date is required');
-    }
-    else{
+    if(birthdateValue == '' ){
 
         setSuccess(birthdate);
     }
+    else if(reDate.test(String(birthdateValue)) && isValidDate(birthdateValue)){
+
+        setSuccess(birthdate);
+    }
+    else{
+
+        valid = setError(birthdate, 'Birth Date is required');
+    }
+
+    return valid;
 };
 
 setInterval(validateInputs, 100);

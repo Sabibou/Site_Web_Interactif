@@ -1,5 +1,8 @@
 
+h2{
 
+    margin-bottom: 1vh;
+}
 
 #figure-img figcaption{
 
@@ -24,7 +27,7 @@
     float: right;
     object-fit: cover;
     margin-left: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border: 1px solid black;
 
 }
@@ -35,14 +38,14 @@
     width: 194px;
     float: left;
     object-fit: cover;
-    margin: 20px 10px 35px 5px;
+    margin: 20px 10px 50px 5px;
     border: 1px solid black;
 
 }
 
 #uncharted{
 
-    margin-bottom: 110px;
+    margin-bottom: 120px;
 }
 
 #ratchet #figure-img{
@@ -51,7 +54,7 @@
     width: 194px;
     float: right;
     object-fit: cover;
-    margin: 20px 10px 50px 5px;
+    margin: 20px 10px 60px 5px;
     border: 1px solid black;
 }
 
@@ -66,4 +69,23 @@
 
         margin-bottom: 160px;
     }
+}
+
+
+@media screen and (max-width: 400px){
+	
+
+	p{
+		width: 95%;
+	}
+
+    h2{
+        width: 70%;
+    }
+
+    #uncharted{
+
+        margin-bottom: 0px;
+    }
+
 }

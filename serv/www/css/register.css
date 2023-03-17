@@ -1,7 +1,21 @@
-.input{
+form{
+
+    margin-left: 20%;
+    width: 80%;
+}
+
+form .input{
 
     display: flex;
+    position: inherit;
     flex-direction: column;
+    width : 70%;
+}
+
+.input label{
+
+
+    font-size: 1.7em;
 }
 
 .input input{
@@ -13,7 +27,7 @@
     font-size: 1.2em;
     padding: 10px;
     margin: 5px;
-    width: 20%;
+    width: 100%;
 }
 
 .input input:focus{
@@ -36,4 +50,12 @@
 .input .error{
     
     color: red;
+}
+
+p input{
+
+    color: white;
+    background: linear-gradient(rgb(1 114 208), rgb(0 67 156));
+    height: 30px;
+    margin-right: 10vw;
 }

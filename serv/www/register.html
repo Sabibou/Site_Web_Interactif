@@ -25,12 +25,27 @@
                     <li id="grow">
                         <a href="./index.html">Page Principal</a>
                         <ul class="sub-list">
-                            <li><a href="#intro">Intro</a></li>
-                            <li><a href="#histoire">Histoire</a></li>
+                            <li><a href="./index.html#intro">Intro</a></li>
+                            <li><a href="./index.html#histoire">Histoire</a></li>
                         </ul>
                     </li>
-                    <li id="grow"><a href="./games.html">Jeux vidéos</a></li>
-                    <li id="grow"><a href="./accessories.html">Accessoires</a></li>
+                    <li id="grow">
+                        <a href="./games.html">Jeux vidéos</a>
+                        <ul class="sub-list">
+                            <li><a href="./games.html#GOW">God of War</a></li>
+                            <li><a href="./games.html#uncharted">Uncharted</a></li>
+                            <li><a href="./games.html#ratchet">Ratchet&Clank</a></li>
+                        </ul>
+                    
+                    </li>
+                    
+                    <li id="grow">
+                        <a href="./accessories.html">Accessoires</a>
+                        <ul class="sub-list">
+                            <li><a href="./accessories.html#console">Consoles</a></li>
+                            <li><a href="./accessories.html#vr">VR</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
 
@@ -39,57 +54,59 @@
             </a>
         </header>
 
-			<h1> Se registrer </h1>
-			<!--
-			<p>Submitted values :</p>
-			<ul>
-				<li>Username: ${username}</li>
-				<li>Email: ${useremail}</li>
-				<li>Password: ${userpwd}</li>
-				<li>First name: ${firstname}</li>
-				<li>Last name: ${lastname}</li>
-				<li>Birthdate: ${birthdate}</li>
-			</ul>
-			
-			<h2> Form </h2>
-			-->
-			<form id="form" method="post" action="/htbin/register.py">
-				<div class="input">
-					<label for="username">User Name</label>
-					<input id="username" type="text" name="username"/>
-					<div class="error"></div>
-				</div>
-				<div class="input">
-					<label for="useremail">Email</label>
-					<input id="useremail" type="text" name="useremail"/>
-					<div class="error"></div>
-				</div>
-				<div class="input">
-					<label for="userpwd">Password</label>
-					<input id="userpwd" type="password" name="userpwd"/>
-					<div class="error"></div>
-				</div>
-				<div class="input">
-					<label for="firstname">First Name</label>
-					<input id="firstname" type="text" name="firstname"/>
-					<div class="error"></div>
-				</div>
-				<div class="input">
-					<label for="lastname">Last Name</label>
-					<input id="lastname" type="text" name="lastname"/>
-					<div class="error"></div>
-				</div>
-				<div class="input">
-					<label for="birthdate">Birth Date</label>
-					<input id="birthdate" type="text" name="birthdate"/>
-					<div class="error"></div>
-				</div>
-				
-				<p><input type="submit" value="Register" /><input type="reset" value="Clear" /></p>
-			</form>
-			<a href="/">Retour &agrave; la page d'accueil</a>
+			<main>
 
-		</main>
+				<h1>Créer un compte</h1>
+				<!--
+				<p>Submitted values :</p>
+				<ul>
+					<li>Username: ${username}</li>
+					<li>Email: ${useremail}</li>
+					<li>Password: ${userpwd}</li>
+					<li>First name: ${firstname}</li>
+					<li>Last name: ${lastname}</li>
+					<li>Birthdate: ${birthdate}</li>
+				</ul>
+				
+				<h2> Form </h2>
+				-->
+				<form id="form" method="post" action="htbin/register.py">
+					<div class="input">
+						<label for="username">User Name</label>
+						<input id="username" type="text" name="username"/>
+						<div class="error"></div>
+					</div>
+					<div class="input">
+						<label for="useremail">Email</label>
+						<input id="useremail" type="text" name="useremail"/>
+						<div class="error"></div>
+					</div>
+					<div class="input">
+						<label for="userpwd">Password</label>
+						<input id="userpwd" type="password" name="userpwd"/>
+						<div class="error"></div>
+					</div>
+					<div class="input">
+						<label for="firstname">First Name</label>
+						<input id="firstname" type="text" name="firstname"/>
+						<div class="error"></div>
+					</div>
+					<div class="input">
+						<label for="lastname">Last Name</label>
+						<input id="lastname" type="text" name="lastname"/>
+						<div class="error"></div>
+					</div>
+					<div class="input">
+						<label for="birthdate">Birth Date</label>
+						<input id="birthdate" type="text" name="birthdate"/>
+						<div class="error"></div>
+					</div>
+					
+					<p><input type="submit" value="Register" /><input type="reset" value="Clear" /></p>
+				</form>
+
+
+			</main>
 
 		<footer class="footer">
             <h1>A propos</h1>

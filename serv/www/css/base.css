@@ -17,6 +17,7 @@ p{
 	padding-left: 1vw;
 	padding-right: 1vw;
 	/*padding: 1vw 6vw 1vw 6vw;*/
+	width : 97%
 }
 
 h1, .h1-like {
@@ -131,7 +132,7 @@ h2, .h2-like {
 	text-align: center;
 	background-color: rgb(0 112 209);
 	color: white;
-	font-size: smaller;
+	font-size: small;
 	width: 100%;
 
 
@@ -344,6 +345,12 @@ main > h1{
 		
 	}
 
+	.sub-list li>a{
+
+		font-size: small;
+		
+	}
+
 	.en-tete{
 		height : 8vh;
 	}
@@ -391,6 +398,10 @@ main > h1{
 
 		max-width: 80%;
 	}
+
+	p{
+		width: 95%;
+	}
 }
 
 
@@ -398,7 +409,7 @@ main > h1{
 
 
 	p{
-		width: 95%;
+		width: 90%;
 	}
 
 	.navbar{

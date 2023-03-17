@@ -8,7 +8,7 @@ const birthdate = document.getElementById('birthdate');
 
 form.addEventListener('submit', e => {
 
-    e.preventDefault();
+    //e.preventDefault();
 
     validateInputs();
 });

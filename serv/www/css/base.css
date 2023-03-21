@@ -60,7 +60,7 @@ h2, .h2-like {
 
 .navbar{
 
-	width: 70%;
+	width: 75%;
 	position: relative;
 
 }
@@ -322,15 +322,85 @@ main > h1{
 
 }
 
-@media screen and (min-width: 1200px){
+
+
+@media screen and (max-width: 700px){
+	
+	p{
+		width: 100%;
+	}
 
 	.navbar{
 
-		width: 85vw;
-		left: 1vw;
+		width : 65%;
+	}
+
+	.en-tete{
+
+		height: 6vh;
+	}
+	/*
+	.en-tete a #logo{
+
+		height: 6vh;
+		margin-top: 1vh;
+		
+	
+	}
+	*/
+
+	h2{
+
+		width: 50%;
 	}
 }
 
+@media screen and (max-width: 600px){
+	
+	.navbar{
+
+		max-width: 90%;
+	}
+
+	p{
+		width: 95%;
+	}
+}
+
+
+@media screen and (max-width: 400px){
+
+
+	p{
+		width: 90%;
+	}
+
+	.navbar{
+
+		max-width : 60%;
+		margin: 0;
+	}
+
+
+	h2{
+
+		width: 50%;
+	}
+
+	.column{
+
+		width: 60%
+	}
+
+	.navlist{
+
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}
 
 @media screen and (min-width: 980px){
 
@@ -367,74 +437,12 @@ main > h1{
 		width:75vw;
 	}
 }
-
-@media screen and (max-width: 700px){
 	
-	p{
-		width: 100%;
-	}
+@media screen and (min-width: 1200px){
 
 	.navbar{
 
-		width : 60%;
+		width: 85vw;
+		left: 1vw;
 	}
-
-	.en-tete{
-
-		height: 6vh;
-	}
-	/*
-	.en-tete a #logo{
-
-		height: 6vh;
-		margin-top: 1vh;
-		
-	
-	}
-	*/
-
-	h2{
-
-		width: 50%;
-	}
-}
-
-@media screen and (max-width: 600px){
-	
-	.navbar{
-
-		max-width: 80%;
-	}
-
-	p{
-		width: 95%;
-	}
-}
-
-
-@media screen and (max-width: 400px){
-
-
-	p{
-		width: 90%;
-	}
-
-	.navbar{
-
-		max-width : 50%;
-	}
-
-
-	h2{
-
-		width: 50%;
-	}
-
-	.column{
-
-		width: 60%
-	}
-
-
-
 }

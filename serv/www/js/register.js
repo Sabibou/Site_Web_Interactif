@@ -5,6 +5,9 @@ const userpwd = document.getElementById('userpwd');
 const firstname = document.getElementById('firstname');
 const lastname = document.getElementById('lastname');
 const birthdate = document.getElementById('birthdate');
+const submit = document.getElementById('go');
+
+
 
 form.addEventListener('submit', e => {
 
@@ -13,7 +16,65 @@ form.addEventListener('submit', e => {
 
         e.preventDefault();
     }
+    else{
+        e.preventDefault();
+        const xhr = new XMLHttpRequest();
+        const method = "POST";
+        const url = "../htbin/register.py";
+        
+        xhr.open(method, url, true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = () => {
+        // In local files, status is 0 upon success in Mozilla Firefox
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            const status = xhr.status;
+            if (status === 0 || (status >= 200 && status < 400)) {
+            // The request has been completed successfully
+            console.log(xhr.responseText);
+            response.innerHTML = "Vous êtes maintenant inscrit " + username.value;
+            form.remove();
+            } else {
+            // Oh no! There has been an error with the request!
+            }
+        }
+        };
+        xhr.send("username="+encodeURIComponent(username.value) + "&useremail="+encodeURIComponent(email.value) + "&userpwd="+encodeURIComponent(userpwd.value) + "&firstname="+encodeURIComponent(firstname.value) + "&lastname="+encodeURIComponent(lastname.value) + "&birthdate="+encodeURIComponent(birthdate.value)); 
+    }
 });
+
+
+function sendForm(event) {
+    event.preventDefault();
+    if(validateInputs){
+        const xhr = new XMLHttpRequest();
+        const method = "POST";
+        const url = "../htbin/register.py";
+        
+        xhr.open(method, url, true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = () => {
+        // In local files, status is 0 upon success in Mozilla Firefox
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            const status = xhr.status;
+            if (status === 0 || (status >= 200 && status < 400)) {
+            // The request has been completed successfully
+            console.log(xhr.responseText);
+            response.innerHTML = xhr.responseText;
+            if(xhr.responseText.indexOf("Bonjour") != -1){
+                form.remove();
+                response.classList.add('success');
+            }
+            else{
+                response.classList.add('error');
+            }
+            } else {
+            // Oh no! There has been an error with the request!
+            }
+        }
+        };
+        xhr.send("username="+encodeURIComponent(username.value)+ "&userpwd=" + encodeURIComponent(userpwd.value)); 
+    }
+}
 
 
 const setError = (element, message) => {
@@ -71,8 +132,6 @@ const validateInputs = () => {
     const firstnameValue = firstname.value.trim();
     const lastnameValue = lastname.value.trim();
     const birthdateValue = birthdate.value.trim();
-
-    const reDate = /\d{2}(\/)\d{2}(\/)\d{4}/ 
 
     let valid = true;
 
@@ -137,7 +196,7 @@ const validateInputs = () => {
 
         setSuccess(birthdate);
     }
-    else if(reDate.test(String(birthdateValue)) && isValidDate(birthdateValue)){
+    else if(isValidDate(birthdateValue)){
 
         setSuccess(birthdate);
     }

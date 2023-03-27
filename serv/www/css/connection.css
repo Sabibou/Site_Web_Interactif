@@ -60,10 +60,12 @@ p input{
     margin-right: 10vw;
 }
 
-/*
-main a{
+#response.error{
 
-    background-color: linear-gradient(rgb(1 114 208), rgb(0 67 156));
-    color: white;
+    color: red;
 }
-*/
+
+#response.success{
+
+    color: green;
+}

@@ -1,0 +1,47 @@
+main{
+
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main>h1{
+
+    width: 100%;
+}
+
+#chat{
+
+    width: 85%;
+    height: 80%;
+    border: 2px solid rgb(1 114 208);
+    overflow: scroll;
+}
+
+form{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+
+#msg{
+
+    border: 2px solid rgb(1 114 208);
+    border-radius: 4px;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 5px;
+    width: 80%;
+    height: 3vh;
+}
+
+#send{
+
+    color: white;
+    background: linear-gradient(rgb(1 114 208), rgb(0 67 156));
+    height: 30px;
+    margin-right: 10vw;
+}

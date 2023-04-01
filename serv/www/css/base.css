@@ -153,8 +153,11 @@ h2, .h2-like {
 	height: 90%;
 	margin-top: 5%;
 	margin-left: 0%;
-	
 
+}
+.en-tete>a{
+
+	width: 9vw;
 }
 
 #user-icon{
@@ -365,6 +368,23 @@ main > h1{
 	p{
 		width: 95%;
 	}
+
+	.en-tete>a{
+
+		width: 20vw;
+	}
+
+	.navlist{
+
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.navlist li:hover .sub-list{
+		display: none;
+	}
 }
 
 
@@ -392,14 +412,6 @@ main > h1{
 		width: 60%
 	}
 
-	.navlist{
-
-		flex-direction: row;
-		flex-wrap: wrap;
-		width: 100%;
-		margin: 0;
-		padding: 0;
-	}
 }
 
 @media screen and (min-width: 980px){
@@ -442,7 +454,7 @@ main > h1{
 
 	.navbar{
 
-		width: 85vw;
+		width: 75vw;
 		left: 1vw;
 	}
 }

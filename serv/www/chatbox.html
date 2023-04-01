@@ -9,7 +9,7 @@
         <link rel="icon" href="./images/playstation_logo.jpeg">
         <link rel="stylesheet" type="text/css" media="all" href="./css/reset.css">
         <link rel="stylesheet" type="text/css" media="all" href="./css/base.css">
-        <link rel="stylesheet" type="text/css" media="all" href="./css/connection.css">
+        <link rel="stylesheet" type="text/css" media="all" href="./css/chatbox.css">
     </head>
 
 	
@@ -56,26 +56,18 @@
 			<main>
 
 				<h1>Se connecter</h1>
-                <!--method="post" action="./htbin/login.py"-->
-				<form id="form" method="post" action="./htbin/login.py">
-					<div class="input">
-						<label for="username">User Name</label>
-						<input id="username" type="text" name="username"/>
-						<div class="error"></div>
-					</div>
-					<div class="input">
-						<label for="userpwd">Password</label>
-						<input id="userpwd" type="password" name="userpwd"/>
-						<div class="error"></div>
-					</div>
+
+                <div id="chat">
+
+                </div>
+
+				<form id="form" method="post" action="/htbin/chatsend.py">
+                    
+                    <input id="msg" type="text" name="msg"/>
+                    <div class="error"></div>
 					
-					<p><input type="submit" value="Register" /><input type="reset" value="Clear" /></p>
+					<input id="send" type="submit" value="Send" />
 				</form>
-
-                <p id="response"></p>
-                <a id="register" href="register.html">Créer un compte</a>
-
-                <a href="chatbox.html">Accèder à la Chatbox</a>
 
 
 			</main>
@@ -103,7 +95,7 @@
             </div>
         </footer>
 
-		<script src="./js/connection.js"></script>
+		<script src="./js/chatbox.js"></script>
 	</body>
 
 </html>

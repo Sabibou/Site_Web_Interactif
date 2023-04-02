@@ -1,6 +1,6 @@
 main{
 
-    height: 65vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,6 +25,7 @@ form{
     flex-direction: row;
     align-items: center;
     width: 80%;
+    margin-bottom: 0;
 }
 
 #msg{
@@ -44,4 +45,10 @@ form{
     background: linear-gradient(rgb(1 114 208), rgb(0 67 156));
     height: 30px;
     margin-right: 10vw;
+}
+
+#error-msg{
+
+    width: 80%;
+    margin-top: 0;
 }

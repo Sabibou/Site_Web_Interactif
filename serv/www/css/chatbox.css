@@ -60,7 +60,23 @@ form{
 
 #chat div:nth-child(2n){
 
-    background-color: darkgray;
+    background-color: lightgray;
+}
+
+.user{
+
+    background-color: rgb(1 114 208);
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    width: 20%;
+    margin-left: 0.5vw;
+    margin-bottom: 0;
+}
+
+.date{
+
+    font-style: italic;
 }
 
 @media screen and (max-height: 600px){

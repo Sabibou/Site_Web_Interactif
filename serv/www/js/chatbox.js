@@ -50,12 +50,15 @@ function createMsg(obj){
 
   var p = document.createElement("p");
   p.innerHTML = obj.msg;
+  p.classList.add("txt");
 
   var date = document.createElement("p");
   date.innerHTML = obj.date + " " + obj.time;
+  date.classList.add("date");
 
   var user = document.createElement("p");
   user.innerHTML = obj.user; 
+  user.classList.add("user");
 
   bloc.append(user);
   bloc.append(p);

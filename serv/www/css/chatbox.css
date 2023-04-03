@@ -52,3 +52,21 @@ form{
     width: 80%;
     margin-top: 0;
 }
+
+#chat div{
+
+    border-bottom: 2px solid rgb(1 114 208);
+}
+
+#chat div:nth-child(2n){
+
+    background-color: darkgray;
+}
+
+@media screen and (max-height: 600px){
+
+	main{
+
+        height: 100vh;
+    }
+}

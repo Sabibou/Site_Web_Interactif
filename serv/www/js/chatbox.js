@@ -33,6 +33,8 @@ function sendForm(event) {
           else{
 
             getMsg(false);
+            errorMsg.innerHTML = "";
+            msg.value = "";
           }
         } else {
           // Oh no! There has been an error with the request!

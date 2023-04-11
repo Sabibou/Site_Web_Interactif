@@ -4,7 +4,7 @@ h2{
     margin-bottom: 1vh;
 }
 
-#figure-img figcaption{
+.figure-img figcaption{
 
     text-align: center;
     background: linear-gradient(rgb(1 114 208), rgb(0 67 156));
@@ -20,7 +20,7 @@ h2{
 }
 
 
-#GOW #figure-img{
+#GOW .figure-img{
 
     height: 250px;
     width: 250px;
@@ -32,7 +32,7 @@ h2{
 
 }
 
-#uncharted #figure-img{
+#uncharted .figure-img{
 
     height: 259px;
     width: 194px;
@@ -48,7 +48,7 @@ h2{
     margin-bottom: 120px;
 }
 
-#ratchet #figure-img{
+#ratchet .figure-img{
 
     height: 259px;
     width: 194px;

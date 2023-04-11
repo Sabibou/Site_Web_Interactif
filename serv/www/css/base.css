@@ -173,11 +173,11 @@ h2, .h2-like {
 
 
 
-#grow { 
+.grow { 
 	transition: all .2s ease-in-out; 
 }
 	
-#grow:hover { 
+.grow:hover { 
 	transform: scale(1.1); 
 }
 

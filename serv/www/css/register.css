@@ -36,12 +36,6 @@ form .input{
     border-color: blue;
 }
 
-/*
-.input.error input{
-
-    border-color: red;
-}
-*/
 .input.success input{
 
     border-color: green;
@@ -60,10 +54,13 @@ p input{
     margin-right: 10vw;
 }
 
-/*
-main a{
+#response{
 
-    background-color: linear-gradient(rgb(1 114 208), rgb(0 67 156));
-    color: white;
+    color: rgb(0 67 156);
+    width: 100%;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 5vh;
+    padding-left: 20%;
+
 }
-*/

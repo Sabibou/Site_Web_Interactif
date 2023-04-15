@@ -117,14 +117,6 @@
     padding-right: 20%;
 }
 
-/*
-[id^="ps"]:checked + .slide-img {
-    left: 0;
-    z-index: 100;
-    transition: left 0.3s, ease;
-}
-*/
-
 
 [id^="slider-img"]:checked + .slide{
     left: 0;

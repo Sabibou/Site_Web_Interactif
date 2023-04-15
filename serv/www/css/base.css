@@ -325,6 +325,13 @@ main > h1{
 
 }
 
+#author{
+
+	padding-bottom: 1.5vh;
+	margin-bottom: 1vh;
+
+}
+
 
 
 @media screen and (max-width: 700px){
